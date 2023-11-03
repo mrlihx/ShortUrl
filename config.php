@@ -1,5 +1,4 @@
 <?php
-global $config;
 $config = [];
 
 // 程序安装路径

@@ -1,6 +1,7 @@
 <?php
 
 require_once('inc/require.php');
+global $config;
 
 if(isset($_GET['id'])) {
     $url_c = new url();

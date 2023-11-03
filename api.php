@@ -4,7 +4,7 @@ header('Content-type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Methods:POST');
 require_once('inc/require.php');
-
+global $config;
 
 $kind = $_POST['kind'];
 $type = $_POST['type'];
