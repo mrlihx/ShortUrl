@@ -13,6 +13,11 @@ if(isset($_GET['id'])) {
     return;
 }
 
+if(!$config['showhome']) {
+    include("404.html");
+    exit();
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -30,8 +35,8 @@ if(isset($_GET['id'])) {
     <meta property="og:title" content="<?php echo get_config('title'); ?>">
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <link href="./assets/css/google.css" rel="stylesheet" />
+    <link href="./assets/css/all.min.css" rel="stylesheet">
     <!-- Nucleo Icons -->
     <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
     <!-- CSS Files -->
@@ -222,12 +227,12 @@ if(isset($_GET['id'])) {
         </div>
     </div>
     <!--   Core JS Files   -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/popper.min.js" type="text/javascript"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script src="./assets/js/clipboard.min.js"></script>
+    <script src="./assets/js/main.js" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
             blackKit.initDatePicker();

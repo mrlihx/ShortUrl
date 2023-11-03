@@ -18,11 +18,12 @@ $config['description'] = '免费的短网址生成与还原';
 $config['ipc'] = '辽ICP备88888888号';
 
 
-// 默认生成短链接时效  单位/分钟  1天=1440分钟
+// 默认生成短链接时效  单位/分钟  1天=1440分钟, -1为永久
 $config['urlendtime'] = 1440;
 // API key
-$config['key'] = "key";
-
+$config['key'] = "key123";
+// 是否显示主页
+$config['showhome'] = true;
 // 域名
 $config['domain'] = array(
     [
@@ -31,7 +32,7 @@ $config['domain'] = array(
     ],
     [
         "url" => "bbb.cn",
-        'state' => true
+        'state' => false
     ]
 );
 

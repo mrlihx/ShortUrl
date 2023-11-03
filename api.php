@@ -11,7 +11,13 @@ $type = $_POST['type'];
 $url = $_POST['url'];
 $endtime = $_POST['endtime'];
 $key = $_POST['key'];
+if(empty($kind)) $kind = $_GET['kind'];
+if(empty($type)) $type = $_GET['type'];
+if(empty($url)) $url = $_GET['url'];
+if(empty($endtime)) $endtime = $_GET['endtime'];
+if(empty($key)) $key = $_GET['key'];
 
+if (empty($kind)) $kind = $_SERVER['SERVER_NAME'];
 if(isset($endtime) and $key != $config['key']){
     returnResult("", "Key错误");
     exit;
@@ -32,7 +38,7 @@ if ($type == 'toLong') {
     
     foreach ($config['domain'] as $domain) {
         if($domain['state'] and $domain['url'] == $kind){
-            
+
             $ddata = create_uri($url, $kind, $endtime);
             if($ddata['success']){
                 $short_url = $ddata['url'];
@@ -40,7 +46,7 @@ if ($type == 'toLong') {
                 $msg = $ddata['msg'];
             }
             break;
-            
+
         }
     }
 
